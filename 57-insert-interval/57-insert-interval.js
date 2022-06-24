@@ -15,7 +15,7 @@ var insert = function(intervals, newInterval) {
   while (i < intervals.length && intervals[i][1] < newInterval[0]) {
     result.push(intervals[i]);
     i++;
-       console.log("1st while",i) 
+       
   }
 
   // Initialize mid interval with the new interval's start and end
@@ -31,11 +31,11 @@ var insert = function(intervals, newInterval) {
     ];
 
     i++;
-     console.log("2nd while",i) 
+     
   }
   // Push the merged interval into the result
   result.push(midInterval);
-     console.log("last",i) 
+     
   // Push the remaining intervals after the merge into the result
   result = result.concat(intervals.slice(i));
 
