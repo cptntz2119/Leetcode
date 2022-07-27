@@ -18,7 +18,7 @@ var uniquePathsWithObstacles = function(OG) {
     
     const m = OG.length, n = OG[0].length 
     
-    if(OG[0][0] || OG[m - 1][n - 1]) return false
+     if(OG[0][0] || OG[m - 1][n - 1]) return 0
     
     for(let i = 0; i < m; i++) {
         for(let j = 0; j < n; j++) {
