@@ -22,7 +22,7 @@ var searchInsert = function(nums, target) {
     }
     
     return left;
-    
+    // if target is not found, loop will stop at the point where left finished updating.
     
 //     while (low <= high) {
 //         let mid = Math.floor((high + low) / 2);
