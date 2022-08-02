@@ -2,21 +2,21 @@
  * @param {number[]} nums
  */
 var Solution = function(nums) {
-    this.nums = nums;
+    this.original = [...nums];
 };
 
 /**
  * @return {number[]}
  */
 Solution.prototype.reset = function() {
-    return this.nums;
+    return this.original;
 };
 
 /**
  * @return {number[]}
  */
 Solution.prototype.shuffle = function() {
-    const shuffled = this.nums.slice();
+    const shuffled = [...this.original];
     const length = shuffled.length;
     const swap = (arr, i, j) =>{
         let temp = arr[i];
