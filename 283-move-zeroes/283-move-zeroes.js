@@ -13,12 +13,25 @@ var moveZeroes = function(nums) {
   //       }
   //     //console.log(nums);
   // }
-    
-    for(var i = nums.length;i--;){
-        if(nums[i]===0){
-            nums.splice(i,1);//delete that 0, and then push 0 at the end
-            console.log(nums)
-            nums.push(0);
+   //-------------------------------------- 
+    // for(var i = nums.length;i--;){
+    //     if(nums[i]===0){
+    //         nums.splice(i,1);//delete that 0, and then push 0 at the end
+    //         console.log(nums)
+    //         nums.push(0);
+    //     }
+    // }
+    //-------------------
+    let idx =0;
+    let length = nums.length;
+    for (let i=0;i<length;i++){
+        if(nums[i]!==0){
+            nums[idx]=nums[i];
+            idx++;
         }
     }
+    for (let j=idx;j<length;j++){
+        nums[j]=0;
+    }
+    return nums;
 };
