@@ -18,7 +18,7 @@ var reverseWords = function(s) {
     let words = s.split(" ");
     let result = [];
     result = words.map((word)=>{ 
-        return ((word.split("")).reverse()).join("");
+        return word.split("").reverse().join("");
        //str->arr->str
     })
     return result.join(" ");
