@@ -4,6 +4,8 @@
  * @return {boolean}
  */
 var search = function(nums, target) {
+    //the only modification made from search in taoted I is change nums to be a set, which in the set every ele is unique.
+    
     // const s = new Set(nums); s is object
     // let set = [... s]; make s to be array
     const set = [... new Set(nums)];
