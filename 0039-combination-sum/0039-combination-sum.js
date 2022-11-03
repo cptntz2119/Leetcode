@@ -8,10 +8,12 @@ var combinationSum = function(candidates, target) {
        
     function backtrcking(temp = [], sum = 0, index =0){
         if (sum > target) return;       
-        if (sum === target) result.push(temp);
+        if (sum === target) result.push([...temp]);
     
         for (let i = index; i< candidates.length; i++) {
-            backtrcking([...temp, candidates[i]], sum+candidates[i], i); 
+            temp.push(candidates[i])
+            backtrcking([...temp], sum+candidates[i], i); 
+            temp.pop();
         }
     }
         backtrcking();
