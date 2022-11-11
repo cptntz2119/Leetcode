@@ -14,8 +14,10 @@ var combine = function(n, k) {
         }
         for (let i = startNum; i<=n; i++){
             currentSolution.push(i);
+             // console.log(currentSolution)
             backtrack(currentSolution, i+1, result);
             currentSolution.pop();
+             // console.log("pop",currentSolution)
         }
         
     }
